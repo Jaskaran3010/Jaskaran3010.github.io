@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { site } from "@/data/site";
 import { publishedProjects } from "@/data/projects";
 
+export const dynamic = "force-static";
+
 /** Emits entries only once the production domain is set in site.ts. */
 export default function sitemap(): MetadataRoute.Sitemap {
   if (!site.url) return [];
