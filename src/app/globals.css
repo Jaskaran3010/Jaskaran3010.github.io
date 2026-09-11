@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@theme {
+  /* ————— Editorial research palette ————— */
+  --color-paper: #fafaf7; /* off-white ground */
+  --color-paper-2: #f3f3ee; /* recessed surfaces */
+  --color-ink: #17181a; /* near-black text */
+  --color-ink-2: #45473f; /* secondary text */
+  --color-muted: #7a7d73; /* tertiary / meta text */
+  --color-hairline: #e3e3db; /* thin borders */
+  --color-hairline-2: #d3d3c9; /* hover borders */
+  --color-sage: #b03424; /* single accent: academic crimson */
+  --color-sage-dark: #92291b;
+  --color-video: #101210; /* video wells */
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, "SF Mono", monospace;
+  --font-serif: var(--font-newsreader), ui-serif, Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-sage);
+  color: var(--color-paper);
+}
+
+/* Meta labels: small mono caps used across the site */
+.meta-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* Inline placeholder tokens ([ADD ...]) rendered distinctly so they are
+   easy to spot and impossible to mistake for real content. */
+.placeholder-token {
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+  color: var(--color-muted);
+  background: var(--color-paper-2);
+  border: 1px dashed var(--color-hairline-2);
+  border-radius: 3px;
+  padding: 0.1em 0.45em;
+  white-space: nowrap;
+}
+
+/* Scroll-reveal (used by <Reveal/>). Motion is subtle and disabled when
+   the user prefers reduced motion. */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Understated link underline that slides in on hover. */
+.quiet-link {
+  position: relative;
+  text-decoration: none;
+}
+
+.quiet-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.quiet-link:hover::after,
+.quiet-link:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Keyboard focus — visible, on-brand, never on mouse focus. */
+:focus-visible {
+  outline: 2px solid var(--color-sage);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Skip link: hidden until focused. */
+.skip-link {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+  padding: 0.5rem 0.9rem;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  border-radius: 3px;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus-visible {
+  transform: none;
+}
