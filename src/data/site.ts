@@ -6,14 +6,14 @@
 export const site = {
   name: "Jaskaran Singh",
   tagline:
-    "Robotics researcher at Skild AI working on the evaluation and systems integration of S1, and on what it takes for learned robot policies to survive the real world.",
+    "Robotics researcher at Skild AI working on the evaluation and data pipeline behind S1, and on what it takes for learned robot policies to survive the real world.",
   affiliation: "Skild AI",
   location: "San Jose, California",
   title: "Jaskaran Singh · Robotics & Embodied AI",
   /** Production URL. Set when the domain exists — enables absolute OG/social URLs. */
   url: "" as string, // e.g. "https://jaskaransingh.com"
   description:
-    "Jaskaran Singh works on robot learning at Skild AI: evaluation and systems integration for S1 (in-context learning for robotics), and predicting failures in learned robot policies.",
+    "Jaskaran Singh works on robot learning at Skild AI: the evaluation and data pipeline behind S1 (in-context learning for robotics), and predicting failures in learned robot policies.",
   links: {
     github: "https://github.com/Jaskaran3010",
     linkedin: "https://www.linkedin.com/in/jaskaran-singh-199780222",
@@ -49,7 +49,7 @@ export const externalLinks = [
 export const updates = [
   {
     date: "Aug 2026",
-    text: "Skild AI releases S1, its in-context-learning robot foundation model. I work on its evaluation and systems integration.",
+    text: "Skild AI releases S1, its in-context-learning robot foundation model. I work on its evaluation and the data pipeline behind it.",
     href: "https://www.skild.ai/blogs/s1",
     label: "Release",
   },

@@ -45,14 +45,14 @@ export default function Home() {
               S1
             </Link>
             , Skild&apos;s in-context-learning robot foundation model. My work
-            there is evaluation and systems integration: how S1 is measured
-            against the real world, and how the pieces around the model are
-            made to work as one system.
+            sits on both sides of the model: the evaluation that decides what
+            can honestly be concluded from what S1 does, and the data pipeline
+            and systems that decide what it is shown in the first place.
           </p>
           <p>
             My research interests are the evaluation of robot foundation
-            models, the systems that turn a model into a working robot, and
-            predicting failures in learned policies before they happen.
+            models, the data pipelines that bound what those models can learn,
+            and predicting failures in learned policies before they happen.
           </p>
           <p>
             The hard problem in robot learning has moved. Getting a policy to

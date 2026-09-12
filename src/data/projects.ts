@@ -79,7 +79,7 @@ export const projects: Project[] = [
     collaborators: [{ name: "Skild AI team" }],
     organization: "Skild AI",
     description:
-      "Skild AI's flagship robotic foundation model, built around in-context learning. Tasks are specified by a video demonstration rather than language, and S1 executes unseen tasks, including extremely long-horizon ones, with a single set of weights. My part is evaluation and systems integration: how S1 is measured against the real world, and how the stack around the model is made to work as one system.",
+      "Skild AI's flagship robotic foundation model, built around in-context learning. Tasks are specified by a video demonstration rather than language, and S1 executes unseen tasks, including extremely long-horizon ones, with a single set of weights. My part sits on both sides of the model: the evaluation that measures what S1 can actually do, and the data pipeline and systems that produce what it learns from.",
     heroMedia: {
       video: "/media/icl-demo.mp4",
       videoPoster: "/media/icl-poster.jpg",
@@ -89,7 +89,7 @@ export const projects: Project[] = [
       externalUrl: "https://www.skild.ai/blogs/s1",
       externalLabel: "Read the release ↗",
     },
-    tags: ["real-world evaluation", "in-context learning", "long-horizon manipulation", "foundation models"],
+    tags: ["real-world evaluation", "data infrastructure", "in-context learning", "foundation models"],
     links: [
       { label: "release", href: "https://www.skild.ai/blogs/s1" },
       // Re-add the announcement link when it exists.
@@ -116,7 +116,7 @@ export const projects: Project[] = [
       {
         heading: "My contribution",
         body: [
-          "S1 is a team project at Skild AI. The core research and algorithms are the team's work, and the model itself is not mine. My part is two things. First, evaluation: I was the first person on S1's evals, building how the model gets measured against the real world, which is where a foundation model's claims are either earned or not. Second, systems integration: making the pieces around the model work as one system. In robotics nothing counts until the whole system works and the numbers hold, and that is the part I carry.",
+          "S1 is a team project at Skild AI. The core research and algorithms are the team's work, and the model itself is not mine. My part is two things. First, evaluation: I was the first person on S1's evals, building how the model gets measured against the real world, which is where a foundation model's claims are either earned or not. Second, the data pipeline and the systems around it: what a model can learn is bounded by what its data captures, so designing that pipeline is a research decision rather than a logistics one. In robotics nothing counts until the whole system works and the numbers hold, and that is the part I carry.",
         ],
       },
     ],
