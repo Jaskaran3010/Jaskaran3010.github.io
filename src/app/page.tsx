@@ -55,11 +55,10 @@ export default function Home() {
             predicting failures in learned policies before they happen.
           </p>
           <p>
-            Robot learning carries an old promise: machines that take up the
-            physical work that wears people down, so human time can go where
-            only humans can spend it. I work on the part of the promise that
-            has no shortcuts: the evaluation and the systems that decide whether
-            a learned policy can be trusted.
+            The hard problem in robot learning has moved. Getting a policy to
+            work once is a demo; knowing whether it will work again, before it
+            is deployed, is the science. I was the first person on S1&apos;s
+            evaluation, and that is the question I work on.
           </p>
           <p>
             The first learned policy I worked with{" "}
