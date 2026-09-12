@@ -65,8 +65,9 @@ export default function Home() {
             <Link href="/projects/scrambled-egg" className={accent}>
               cooked scrambled eggs
             </Link>
-            . Watching it fail in ways no simulator predicts taught me that a
-            policy is only as good as the evaluation that catches it failing.
+            . Watching it fail on real hardware, on a task I thought it had,
+            taught me that a policy is only as good as the evaluation that
+            catches it failing.
           </p>
           <p>
             I&apos;ve been lucky to learn this craft from{" "}
